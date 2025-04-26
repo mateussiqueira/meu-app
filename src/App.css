@@ -1,38 +1,76 @@
 .App {
+  font-family: 'Inter', sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Valores de opacity */
+.text-white\/90 {
+  color: rgba(255, 255, 255, 0.9);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Tamanhos específicos */
+.size-6 {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.size-12 {
+  width: 3rem;
+  height: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.size-14 {
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
-@keyframes App-logo-spin {
+/* Transform */
+.transform {
+  transform: translateX(-50%);
+}
+
+/* Hover effects */
+a.hover\:text-white:hover,
+a:hover {
+  color: #FFFFFF;
+  transition: color 0.2s ease;
+}
+
+button.hover\:scale-105:hover,
+a.hover\:scale-105:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button.hover\:shadow-md:hover,
+a.hover\:shadow-md:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+a.hover\:opacity-90:hover {
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+/* Animações - implementação para os TODOs */
+@keyframes fadeUp {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* Suporte para lg (large screens) */
+@media (min-width: 1024px) {
+  .lg\:text-6xl {
+    font-size: 3.75rem;
   }
 }
